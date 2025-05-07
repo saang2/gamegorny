@@ -119,17 +119,9 @@
 
     </script>
 
+   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script>
-  if (typeof vkBridge !== 'undefined') {
-    vkBridge.send('VKWebAppGetUserInfo')
-      .then(data => {
-        console.log("Данные пользователя:", data);
-        // data.first_name, data.last_name, data.photo_100, data.id
-      })
-      .catch(error => {
-        console.error("Ошибка:", error);
-      });
-  }
+  vkBridge.send('VKWebAppInit');
 </script>
   </body>
 </html>
